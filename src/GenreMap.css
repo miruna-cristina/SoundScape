@@ -1,0 +1,65 @@
+/* General SVG Styling */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+
+/* Apply globally to all SVGs */
+svg {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Apply globally to labels */
+.label, .subgenre-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px; /* Adjust as needed */
+    font-weight: 600; /* Semi-bold weight */
+    fill: white; /* Ensure text is readable */
+  }
+  
+  /* Optional: Change font size or weight for subgenres */
+  .subgenre-label {
+    font-size: 14px;
+    font-weight: 600; /* Semi-bold for subgenre labels */
+  }  
+  
+  /* Genre Regions */
+  .region {
+    fill-opacity: 0.8; /* Slight transparency */
+    transition: stroke-width 0.3s, stroke 0.3s, fill-opacity 0.3s;
+  }
+  
+  .region:hover {
+    fill-opacity: 1; /* Full opacity on hover */
+  }
+  
+  /* Labels for Genres */
+  .label {
+    fill: white;
+    font-size: 18px;
+    text-anchor: middle;
+    pointer-events: none; /* Let clicks pass through */
+  }
+  
+  /* Subgenres */
+  .subgenre {
+    cursor: pointer;
+    transition: stroke-width 0.3s, stroke 0.3s, opacity 0.3s;
+  }
+  
+  .subgenre:hover {
+    stroke: white; /* Highlight color */
+    stroke-width: 3px;
+  }
+  
+  /* Subgenre Labels */
+  .subgenre-label {
+    fill: white;
+    font-size: 14px;
+    text-anchor: middle;
+    cursor: pointer;
+    transition: font-size 0.3s, fill 0.3s;
+  }
+  
+  .subgenre-label:hover {
+    font-size: 16px; /* Slightly larger on hover */
+    fill: white; /* Highlighted text color */
+  }
+  

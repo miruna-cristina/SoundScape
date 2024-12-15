@@ -1,0 +1,187 @@
+/* Container for the card */
+.song-card-container {
+  background: #222; /* Grey background for the container */
+  cursor: pointer;
+  }
+  
+  /* The card itself */
+  .song-card {
+    width: 300px;
+    height: 510px;
+    position: relative;
+    transform-style: preserve-3d; /* Allows 3D transformations */
+    transition: transform 0.6s; /* Smooth flip effect */
+    top: 7px;
+    left: 10px;
+  }
+  
+  /* Flipped state */
+  .song-card.flipped {
+    transform: rotateY(180deg); /* Rotate the card to show the back side */
+  }
+  
+  /* Front and back sides */
+  .front-side,
+  .back-side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when not flipped */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Back side is hidden initially */
+  .back-side {
+    transform: rotateY(180deg);
+  }
+
+.song-card-overlay {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  position: absolute;
+  top: 6%;
+  left: 6%;
+  right: 6%;
+  bottom: 6%;
+  padding: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.song-card-container {
+  width: 320px; 
+  height: 530px; 
+  background: #222;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.song-card-container:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+.song-cover {
+  width: 170px;
+  height: 170px; /* Adjust height based on your design */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+  margin-bottom: 15px; /* Space below the cover */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden; /* Prevents content from going outside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Play button styling */
+.play-button {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  border-radius: 50%; /* Circle shape */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure the icon is fully centered */
+  color: white;
+  font-size: 24px; /* Adjust size for the play icon */
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Add shadow for depth */
+}
+
+/* Hover effect on the play button */
+.play-button:hover {
+  transform: scale(1.2); /* Grow slightly on hover */
+  background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Play icon inside the button */
+.play-button > svg {
+  display: block; /* Ensure the SVG scales properly */
+  font-size: 24px; /* Match the icon size */
+  margin: 0; /* Remove any unintended margins */
+  position: relative; /* Make it relative to the button */
+  left: 2px; /* Center vertically */
+}
+
+.song-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.song-artist {
+  font-size: 16px;
+  color: #bbb;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.genre-subgenre-releaseyear-container {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.genre,
+.subgenre,
+.releaseyear {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.genre strong,
+.subgenre strong,
+.releaseyear strong {
+  color: #e600ff;
+}
+
+.popularity-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #bbb; /* Label text color */
+  margin-bottom: 5px; /* Adds spacing between the label and stars */
+  text-align: center; /* Centers the text within its container */
+}
+
+.popularity-stars {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filled-star {
+  color: #ffc107; /* Gold color for filled stars */
+  margin: 0 2px;
+  font-size: 18px;
+}
+
+.empty-star {
+  margin: 0 2px;
+  font-size: 18px;
+}
